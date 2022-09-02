@@ -8,12 +8,12 @@
 
     利用了zookeeper的服务注册中心
 
-# ·    环境配置
+# ·    环境配置
 
-##        项目代码工程目录
-
-            bin：可执行文件
-            build：项目编译文件
+##        项目代码工程目录
+```
+            bin：可执行文件
+            build：项目编译文件
             lib：项目库文件
             src：源文件
             test：测试代码
@@ -21,18 +21,19 @@
             CMakeLists.txt：顶层的cmake文件
             README.md：项目自述文件
             autobuild.sh：一键编译脚本
+```
+            
+##         第三方库
 
-##         第三方库
-
-            protobuf        
+            protobuf      
 
             muduo网络库
 
             zookeeper分布式协调服务
+           
+# 项目主要类描述
 
-# 项目主要类描述
-
-## class MprpcConfig
+## class MprpcConfig
 
 ```
  //读取配置文件，并保存在map表中
@@ -45,7 +46,7 @@
  std::string Load(const std::string &key);
 ```
 
-## class MprpcApplication
+## class MprpcApplication
 
 ```
 // mprpc框架的基础类，负责框架的一些初始化操作
@@ -58,7 +59,7 @@ class MprpcApplication
      static MprpcConfig m_config;
 ```
 
-## class RpcProvider
+## class RpcProvider
 
 ```
 // 框架提供的专门发布rpc服务的网络对象类
@@ -80,7 +81,7 @@ class RpcProvider
  std::unordered_map<std::string, ServiceInfo> m_serviceMap;
 ```
 
-## muduo绑定的消息回调函数OnMessage
+## muduo绑定的消息回调函数OnMessage
 
 ```
 
@@ -95,7 +96,7 @@ class RpcProvider
     
 ```
 
-## mprpc的调用
+## mprpc的调用
 
 ```
 
