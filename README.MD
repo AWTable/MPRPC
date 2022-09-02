@@ -24,16 +24,14 @@
 ```
             
 ## 依赖库
-```
-            protobuf      
-
+            protobuf        
             muduo网络库
-
             zookeeper分布式协调服务
-```           
+          
+    
 # 项目主要类描述
 
-## class MprpcConfig
+## 类 MprpcConfig
 
 ```
  //读取配置文件，并保存在map表中
